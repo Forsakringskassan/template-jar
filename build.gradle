@@ -1,0 +1,34 @@
+buildscript {
+  repositories {
+	gradlePluginPortal()
+	mavenCentral()
+	maven {
+	  url = uri("https://maven.pkg.github.com/Forsakringskassan/gradle-conventions")
+	  credentials {
+	    username = System.getenv("GITHUB_ACTOR")
+	    password = System.getenv("GITHUB_TOKEN")
+	  }
+	}
+  }
+
+  dependencies {
+    classpath "se.fk.gradle:gradle-conventions:1.0.1"
+  }
+}
+
+apply plugin: "se.fk.gradle.bundle-jar"
+
+javaExtension {
+	javaVersion = 17
+}
+
+staticCodeAnalysisExtension {
+	maxViolations.set(1)
+}
+
+dependencies {
+	implementation 'com.google.code.gson:gson:2.13.1'
+
+	compileOnly "org.immutables:value:2.10.1"
+	annotationProcessor 'org.immutables:value:2.10.1'
+}
