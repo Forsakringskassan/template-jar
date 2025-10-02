@@ -1,3 +1,9 @@
+## 0.0.2 (2025-10-02)
+
+### Bug Fixes
+
+-  trigger version change ([f0d55](https://github.com/Forsakringskassan/template-jar/commit/f0d554265e34b46) Tomas Bjerre)  
+
 ## 0.0.0 (2025-10-02)
 
 ### Other changes
