@@ -2,6 +2,7 @@ buildscript {
   repositories {
 	gradlePluginPortal()
 	mavenCentral()
+	mavenLocal()
 	maven {
 	  url = uri("https://maven.pkg.github.com/Forsakringskassan/gradle-conventions")
 	  credentials {
@@ -12,7 +13,7 @@ buildscript {
   }
 
   dependencies {
-    classpath "se.fk.gradle:gradle-conventions:1.4.0"
+    classpath "se.fk.gradle:gradle-conventions:1.5.0"
   }
 }
 
@@ -29,6 +30,6 @@ staticCodeAnalysisExtension {
 dependencies {
 	implementation 'com.google.code.gson:gson:2.13.2'
 
-	compileOnly "org.immutables:value:2.10.1"
-	annotationProcessor 'org.immutables:value:2.10.1'
+	compileOnly "org.immutables:value:2.11.4"
+	annotationProcessor "org.immutables:value:2.11.4"
 }
