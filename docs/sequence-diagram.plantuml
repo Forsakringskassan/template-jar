@@ -1,0 +1,60 @@
+@startuml sequence-diagram
+title Do stuff with things
+
+skin rose
+
+actor Brukare
+
+box Frontend #LightYellow
+    participant DjurSP
+end box
+
+box Backend #LightGreen
+    participant DjurRest
+    database DB
+end box
+
+box Backendbackend #LightBlue
+    participant DjurBackendbackend
+end box
+
+Brukare -> DjurSP
+activate DjurSP
+    DjurSP -> DjurRest
+    activate DjurRest
+        note right: ""GET /private/v1/djur""
+        DjurRest --> DjurSP
+    deactivate DjurRest
+
+    DjurSP -> DjurSP: Renderar GUI
+
+    Brukare -> DjurSP: Fyller i uppgifter
+
+    Brukare -> DjurSP: Klickar på "skicka in"
+
+    DjurSP -> DjurRest
+    activate DjurRest
+        note right: ""POST /private/v1/ansokan""
+        DjurRest -> DjurRest: Validerar
+
+        alt Validerings ej ok
+            DjurRest --> DjurSP: Ansökan validerad ej ok
+        else Validering ok
+            DjurRest -> DjurRest: Skapar PDF
+            DjurRest -> DB: Sparar PDF
+
+            DjurRest -> DjurFormanBackend
+            activate DjurFormanBackend
+                note right: ""POST /x/y/z""
+                DjurFormanBackend --> DjurRest
+            deactivate DjurFormanBackend
+
+            DjurRest --> DjurSP: Ansökan validerad ok
+        end
+    deactivate DjurRest
+
+    DjurSP -> DjurSP: Visar kvittens
+deactivate DjurSP
+@enduml
+
+@enduml
