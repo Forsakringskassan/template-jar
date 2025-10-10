@@ -1,8 +1,8 @@
 # JAR Template
 
-See [gradle-conventions](https://github.com/Forsakringskassan/gradle-conventions).
+See [gradle-conventions](https://github.com/tomasbjerre/gradle-conventions).
 
-Maven artefact: <https://github.com/orgs/Forsakringskassan/packages?repo_name=template-jar>
+Maven artefact: <https://github.com/Forsakringskassan/repository>
 
 ## Sequence Diagram
 
