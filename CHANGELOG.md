@@ -1,3 +1,13 @@
+## 0.2.0 (2025-10-10)
+
+### Features
+
+-  publish till gemensamt repo ([a8419](https://github.com/Forsakringskassan/template-jar/commit/a8419dba1193fdf) Tomas Bjerre)  
+
+### Bug Fixes
+
+-  env ([18ce7](https://github.com/Forsakringskassan/template-jar/commit/18ce7185983d996) Tomas Bjerre)  
+
 ## 0.1.0 (2025-10-05)
 
 ### Features
