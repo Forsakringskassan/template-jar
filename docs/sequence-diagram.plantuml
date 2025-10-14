@@ -15,7 +15,7 @@ box Backend #LightGreen
 end box
 
 box Backendbackend #LightBlue
-    participant DjurBackendbackend
+    participant DjurFormanBackend
 end box
 
 Brukare -> DjurSP
