@@ -1,3 +1,10 @@
+## 0.2.1 (2025-10-17)
+
+### Bug Fixes
+
+-  **deps**  update dependency org.immutables:value to v2.11.6 ([1cdeb](https://github.com/Forsakringskassan/template-jar/commit/1cdeb3f0fc38141) renovate[bot])  
+-  **deps**  update dependency org.immutables:value to v2.11.5 ([1af47](https://github.com/Forsakringskassan/template-jar/commit/1af471679aae479) renovate[bot])  
+
 ## 0.2.0 (2025-10-10)
 
 ### Features
