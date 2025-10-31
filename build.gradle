@@ -1,5 +1,5 @@
 plugins {
-	id "se.fk.gradle.bundle-jar" version "1.17.4"
+	id "se.fk.gradle.bundle-jar" version "1.18.0"
 }
 
 javaExtension {
